@@ -21,10 +21,10 @@ The IEEE 754 standard defines how floating-point numbers are represented in bina
 4. Final IEEE 754 Representation: 0 10000010 10101000000000000000000
 5. **Hexadecimal Representation**:0x41540000
 ## Features of IEEEAdd Module
-✔ Handles special cases like zero inputs and equal & opposite numbers.
-✔ Aligns exponents before performing addition.
-✔ Supports both positive and negative floating-point values.
-✔ Performs normalization after addition to maintain IEEE 754 compliance.
+ Handles special cases like zero inputs and equal & opposite numbers.
+ Aligns exponents before performing addition.
+ Supports both positive and negative floating-point values.
+ Performs normalization after addition to maintain IEEE 754 compliance.
 ## Inputs and Outputs
 | Signal  | Direction | Width | Description |
 |---------|----------|-------|-------------|
