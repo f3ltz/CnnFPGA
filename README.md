@@ -63,45 +63,45 @@ Implements the entire CNNtop model with two convolution and three fully connecte
 
 ### 2. Train the Model
 Pretrained models are available.
-```sh
+   sh
 cd ./cifar_source_torch
 python main.py
-```
+   
 
 ### 3. Quantization
-Move trained model (`.pt`) to the quantization folder.
-Modify weight paths in `ANNfull.v` and `Lenet_tb.v`.
-```sh
+Move trained model ( .pt ) to the quantization folder.
+Modify weight paths in  ANNfull.v  and  Lenet_tb.v .
+   sh
 python quantification_para.py  # Weight Quantization  
 python quantification_img.py   # Image Quantization  
-```
+   
 
 ### 4. Run Simulation in Vivado
-Open `CNN-FPGA-Vivado`, run `tb` simulation in Vivado to observe results.
+Open  CNN-FPGA-Vivado , run  tb  simulation in Vivado to observe results.
 
 ## File Structure
 ### 1. cifar_source_torch (PyTorch Training Code)
-- `distill.py` – Distillation script
-- `distilled_lenet5_best.pt` – Pretrained model
-- `main.py` – Main script
-- `models.py` – Model definition
-- `save_params.py` – Saves parameters
-- `test.py` – Testing script
+-  distill.py  – Distillation script
+-  distilled_lenet5_best.pt  – Pretrained model
+-  main.py  – Main script
+-  models.py  – Model definition
+-  save_params.py  – Saves parameters
+-  test.py  – Testing script
 
 ### 2. CNN-FPGA-Vivado
 Contains Verilog code, testbenches, and full Vivado project.
 
 ### 3. quantification (Quantization Code)
-- `cifar-10-python` – Dataset
-- `quantification_img.py` – Image quantization
-- `quantification_para.py` – Model weight quantization
+-  cifar-10-python  – Dataset
+-  quantification_img.py  – Image quantization
+-  quantification_para.py  – Model weight quantization
 
 ### 4. weight (Model Weights)
-- `classifier.txt` – Fully connected layer 3 weights
-- `FullyConnected1.txt` – Fully connected layer 1 weights
-- `FullyConnected2.txt` – Fully connected layer 2 weights
-- `Layer1.txt` – Convolution layer 1 weights
-- `Layer2.txt` – Convolution layer 2 weights
+-  classifier.txt  – Fully connected layer 3 weights
+-  FullyConnected1.txt  – Fully connected layer 1 weights
+-  FullyConnected2.txt  – Fully connected layer 2 weights
+-  Layer1.txt  – Convolution layer 1 weights
+-  Layer2.txt  – Convolution layer 2 weights
 
 # Using IEEE 754 Floating-Point Adder in Verilog
 ## Overview
