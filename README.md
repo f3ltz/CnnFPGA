@@ -2,7 +2,7 @@
 
 ## Introduction
 ### Technical Approach
-The project consists of five key phases:
+The project consists of four key phases:
 
 1. **Requirement Definition** – Setting project goals: simulating a multi-object classification task with color images.
 2. **Data Preparation** – Selecting the dataset, preprocessing (cleaning, quantization, etc.).
