@@ -7,12 +7,12 @@ parameter D = 1; //Depth of image and filter
 parameter H = 32; //Height of image
 parameter W = 32; //Width of image
 parameter F = 5; //Size of filter
-parameter K = 6; //Number of filters applied // µÚÒ»²ã¾í»ýºË¸öÊý
+parameter K = 6; //Number of filters applied // ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ë¸ï¿½ï¿½ï¿½
 
 input clk, reset;
 input [0:D*H*W*DATA_WIDTH-1] image;
 input [0:K*D*F*F*DATA_WIDTH-1] filters;
-output reg [0:K*(H-F+1)*(W-F+1)*DATA_WIDTH-1] outputConv; // Êä³öµÄfeature map 
+output reg [0:K*(H-F+1)*(W-F+1)*DATA_WIDTH-1] outputConv; // ï¿½ï¿½ï¿½ï¿½ï¿½feature map 
 
 reg [0:2*D*F*F*DATA_WIDTH-1] inputFilters;
 wire [0:2*(H-F+1)*(W-F+1)*DATA_WIDTH-1] outputSingleLayers;

@@ -31,7 +31,7 @@ wire [DATA_WIDTH*OUTPUT_NODES-1:0] WL3;
 weightMemory 
 #(.INPUT_NODES(INPUT_NODES_L1),
   .OUTPUT_NODES(INPUT_NODES_L2),
-  .file("C:/Users/Asrith S/OneDrive/Desktop/MiniProj/weightfc1.txt"))
+  .file("C:/Users/Asrith S/OneDrive/Desktop/MiniProj/weight/fc1.txt"))
   W1(
     .clk(clk),
     .address(address),
@@ -41,7 +41,7 @@ weightMemory
 weightMemory 
 #(.INPUT_NODES(INPUT_NODES_L2),
   .OUTPUT_NODES(INPUT_NODES_L3),
-  .file("C:/Users/Asrith S/OneDrive/Desktop/MiniProj/fc2.txt"))
+  .file("C:/Users/Asrith S/OneDrive/Desktop/MiniProj/weight/fc2.txt"))
   W2(
     .clk(clk),
     .address(address),
@@ -51,7 +51,7 @@ weightMemory
 weightMemory 
 #(.INPUT_NODES(INPUT_NODES_L3),
   .OUTPUT_NODES(OUTPUT_NODES),
-  .file("C:/Users/Asrith S/OneDrive/Desktop/MiniProj/classifier.txt"))
+  .file("C:/Users/Asrith S/OneDrive/Desktop/MiniProj/weight/classifier.txt"))
   W3(
     .clk(clk),
     .address(address),
