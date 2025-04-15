@@ -7,9 +7,7 @@ import ctypes
 
 
 class Lenet5(nn.Module):
-    '''
-    所用的卷积神经网络
-    '''
+   
 
     def __init__(self):
         super(Lenet5, self).__init__()
@@ -47,9 +45,7 @@ class Lenet5(nn.Module):
 
 
 def dec2bin(x):
-    '''
-    将十进制小数x转为对应的二进制小数
-    '''
+  
     x -= int(x)
     bins = []
     while x:
@@ -60,13 +56,11 @@ def dec2bin(x):
 
 
 def float2IEEE16(x):
-    '''
-    float转IEEE754的半精度浮点数
-    '''
+  
     ms = "0" if x > 0 else "1"
     x = abs(x)
-    x0 = int(x)  # 整数部分
-    x1 = x - x0  # 小数部分
+    x0 = int(x)  
+    x1 = x - x0  
     x0 = bin(x0).replace("0b", "")
     x1 = dec2bin(x1)
     if x0[0] == "0":
@@ -98,13 +92,11 @@ def float2IEEE16(x):
 
 
 def float2IEEE32(x):
-    '''
-    float转IEEE754的单精度浮点数
-    '''
+   
     ms = "0" if x > 0 else "1"
     x = abs(x)
-    x0 = int(x)  # 整数部分
-    x1 = x - x0  # 小数部分
+    x0 = int(x) 
+    x1 = x - x0  
     x0 = bin(x0).replace("0b", "")
     x1 = dec2bin(x1)
     if x0[0] == "0":
@@ -142,7 +134,7 @@ if __name__ == '__main__':
         # print(name, '\t', model.state_dict()[name].shape)
         # print(model.state_dict()[name])
 
-        # 卷积层权重量化
+      
         if name in ["layer1.0.weight", "layer2.0.weight"]:
             fname = name.split(".")[0]
             Tensor = model.state_dict()[name]
@@ -154,7 +146,7 @@ if __name__ == '__main__':
                             for t in range(s4):
                                 f.write(float2IEEE16(Tensor[i][j][k][t]))
                     f.write("\n")
-        # 全连接层权重量化
+      
         if name in ["fc1.0.weight", "fc2.0.weight", "classifier.weight"]:
             fname = name.split(".")[0]
             Matrix = model.state_dict()[name].T
