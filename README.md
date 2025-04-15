@@ -12,15 +12,6 @@ The project consists of four key phases:
 ## Network Architecture
 The model processes CIFAR-10 images through multiple operations to classify them.
 
-### Accuracy Results
-| Model | Accuracy |
-|--------|----------|
-| Teacher Model (ResNet) | 94.7% |
-| Student Model (LeNet) | 67.4% |
-| Non-Distilled LeNet | 52.6% |
-| Quantized LeNet (Simulation) | 55% (?) |
-
-
 ### Features
 - Adapted the project for CIFAR-10 
 - Designed and trained a new PyTorch model with distillation.
@@ -88,7 +79,7 @@ Open  CNN-FPGA-Vivado , run  tb  simulation in Vivado to observe results.
 -  save_params.py  – Saves parameters
 -  test.py  – Testing script
 
-### 2. CNN-FPGA-Vivado
+### 2. CNN-Vivado
 Contains Verilog code, testbenches, and full Vivado project.
 
 ### 3. quantification (Quantization Code)
