@@ -15,8 +15,8 @@ def dec2bin(x):
 def float2IEEE16(x):
     ms = "0" if x > 0 else "1"
     x = abs(x)
-    x0 = int(x) # 整数部分
-    x1 = x - x0 # 小数部分
+    x0 = int(x) 
+    x1 = x - x0 
     x0 = bin(x0).replace("0b", "")
     x1 = dec2bin(x1)
     if x0[0] == "0":
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     one_data = transform(one_data)
 
     one_label = labels[id]
-    print(f"图像的标签为 {one_label}")
+    print(f"{one_label}")
 
     result = ""
 
