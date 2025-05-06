@@ -9,6 +9,7 @@ The project consists of four key phases:
 3. **Model Construction** – Designing and training a neural network in PyTorch, optimizing via distillation, pruning, and weight quantization.
 4. **Verilog Implementation** – Translating the model into Verilog 
 
+
 ## Network Architecture
 The model processes CIFAR-10 images through multiple operations to classify them.
 
